@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "91a16cfe-1425-4377-8d68-ca67a03a1372",
+		"name": "Go HTTP Service API",
+		"description": "API collection for the Go HTTP Service with AI Chat capabilities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4627708"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/hello",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"hello"
+					]
+				},
+				"description": "Simple hello world endpoint"
+			},
+			"response": [
+				{
+					"name": "Hello World",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/hello",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Jan 2025 23:23:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Hello, World!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"health"
+					]
+				},
+				"description": "Health check endpoint"
+			},
+			"response": [
+				{
+					"name": "Health Check",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Jan 2025 23:23:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"status\": \"healthy\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Prometheus Metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/metrics",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"metrics"
+					]
+				},
+				"description": "Prometheus metrics endpoint"
+			},
+			"response": [
+				{
+					"name": "Prometheus Metrics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/metrics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; version=0.0.4; charset=utf-8"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Jan 2025 23:23:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1532"
+						}
+					],
+					"cookie": [],
+					"body": "# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.\n# TYPE go_gc_duration_seconds summary\ngo_gc_duration_seconds{quantile=\"0\"} 0\ngo_gc_duration_seconds{quantile=\"0.25\"} 0\ngo_gc_duration_seconds{quantile=\"0.5\"} 0\ngo_gc_duration_seconds{quantile=\"0.75\"} 0\ngo_gc_duration_seconds{quantile=\"1\"} 0\ngo_gc_duration_seconds_sum 0\ngo_gc_duration_seconds_count 0\n# HELP go_goroutines Number of goroutines that currently exist.\n# TYPE go_goroutines gauge\ngo_goroutines 8\n# HELP go_info Information about the Go environment.\n# TYPE go_info gauge\ngo_info{version=\"go1.23.5\"} 1\n# HELP go_memstats_alloc_bytes Number of bytes allocated and still in use.\n# TYPE go_memstats_alloc_bytes gauge\ngo_memstats_alloc_bytes 743424\n# HELP go_memstats_alloc_bytes_total Total number of bytes allocated, even if freed.\n# TYPE go_memstats_alloc_bytes_total counter\ngo_memstats_alloc_bytes_total 743424\n# HELP go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table.\n# TYPE go_memstats_buck_hash_sys_bytes gauge\ngo_memstats_buck_hash_sys_bytes 4251\n# HELP go_memstats_frees_total Total number of frees.\n# TYPE go_memstats_frees_total counter\ngo_memstats_frees_total 0\n# HELP go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata.\n# TYPE go_memstats_gc_sys_bytes gauge\ngo_memstats_gc_sys_bytes 1.404352e+06\n# HELP go_memstats_heap_alloc_bytes Number of heap bytes allocated and still in use.\n# TYPE go_memstats_heap_alloc_bytes gauge\ngo_memstats_heap_alloc_bytes 743424\n# HELP go_memstats_heap_idle_bytes Number of heap bytes waiting to be used.\n# TYPE go_memstats_heap_idle_bytes gauge\ngo_memstats_heap_idle_bytes 1.032192e+06\n# HELP go_memstats_heap_inuse_bytes Number of heap bytes that are in use.\n# TYPE go_memstats_heap_inuse_bytes gauge\ngo_memstats_heap_inuse_bytes 2.637824e+06\n# HELP go_memstats_heap_objects Number of allocated objects.\n# TYPE go_memstats_heap_objects gauge\ngo_memstats_heap_objects 457\n# HELP go_memstats_heap_released_bytes Number of heap bytes released to OS.\n# TYPE go_memstats_heap_released_bytes gauge\ngo_memstats_heap_released_bytes 1.032192e+06\n# HELP go_memstats_heap_sys_bytes Number of heap bytes obtained from system.\n# TYPE go_memstats_heap_sys_bytes gauge\ngo_memstats_heap_sys_bytes 3.670016e+06\n# HELP go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.\n# TYPE go_memstats_last_gc_time_seconds gauge\ngo_memstats_last_gc_time_seconds 0\n# HELP go_memstats_lookups_total Total number of pointer lookups.\n# TYPE go_memstats_lookups_total counter\ngo_memstats_lookups_total 0\n# HELP go_memstats_mallocs_total Total number of mallocs.\n# TYPE go_memstats_mallocs_total counter\ngo_memstats_mallocs_total 457\n# HELP go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures.\n# TYPE go_memstats_mcache_inuse_bytes gauge\ngo_memstats_mcache_inuse_bytes 9600\n# HELP go_memstats_mcache_sys_bytes Number of bytes used for mcache structures obtained from system.\n# TYPE go_memstats_mcache_sys_bytes gauge\ngo_memstats_mcache_sys_bytes 15600\n# HELP go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures.\n# TYPE go_memstats_mspan_inuse_bytes gauge\ngo_memstats_mspan_inuse_bytes 53600\n# HELP go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system.\n# TYPE go_memstats_mspan_sys_bytes gauge\ngo_memstats_mspan_sys_bytes 65280\n# HELP go_memstats_next_gc_bytes Number of heap bytes when next garbage collection will take place.\n# TYPE go_memstats_next_gc_bytes gauge\ngo_memstats_next_gc_bytes 4.194304e+06\n# HELP go_memstats_other_sys_bytes Number of bytes used for other system allocations.\n# TYPE go_memstats_other_sys_bytes gauge\ngo_memstats_other_sys_bytes 1.221061e+06\n# HELP go_memstats_stack_inuse_bytes Number of bytes in use by the stack allocator.\n# TYPE go_memstats_stack_inuse_bytes gauge\ngo_memstats_stack_inuse_bytes 524288\n# HELP go_memstats_stack_sys_bytes Number of bytes obtained from system for stack allocator.\n# TYPE go_memstats_stack_sys_bytes gauge\ngo_memstats_stack_sys_bytes 524288\n# HELP go_memstats_sys_bytes Number of bytes obtained from system.\n# TYPE go_memstats_sys_bytes gauge\ngo_memstats_sys_bytes 6.904848e+06\n# HELP go_threads Number of OS threads created.\n# TYPE go_threads gauge\ngo_threads 7\n# HELP http_request_duration_seconds Duration of HTTP requests\n# TYPE http_request_duration_seconds histogram\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.005\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.01\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.025\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.05\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.1\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.25\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"0.5\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"1\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"2.5\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"5\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"10\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/health\",method=\"GET\",le=\"+Inf\"} 2\nhttp_request_duration_seconds_sum{endpoint=\"/health\",method=\"GET\"} 6.1709e-05\nhttp_request_duration_seconds_count{endpoint=\"/health\",method=\"GET\"} 2\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.005\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.01\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.025\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.05\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.1\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.25\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"0.5\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"1\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"2.5\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"5\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"10\"} 1\nhttp_request_duration_seconds_bucket{endpoint=\"/hello\",method=\"GET\",le=\"+Inf\"} 1\nhttp_request_duration_seconds_sum{endpoint=\"/hello\",method=\"GET\"} 0.000266708\nhttp_request_duration_seconds_count{endpoint=\"/hello\",method=\"GET\"} 1\n# HELP http_requests_total Total number of HTTP requests\n# TYPE http_requests_total counter\nhttp_requests_total{endpoint=\"/health\",method=\"GET\",status=\"200\"} 2\nhttp_requests_total{endpoint=\"/hello\",method=\"GET\",status=\"200\"} 1\n# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.\n# TYPE process_cpu_seconds_total counter\nprocess_cpu_seconds_total 0.01\n# HELP process_max_fds Maximum number of open file descriptors.\n# TYPE process_max_fds gauge\nprocess_max_fds 1.048576e+06\n# HELP process_open_fds Number of open file descriptors.\n# TYPE process_open_fds gauge\nprocess_open_fds 7\n# HELP process_resident_memory_bytes Resident memory size in bytes.\n# TYPE process_resident_memory_bytes gauge\nprocess_resident_memory_bytes 1.2382208e+07\n# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.\n# TYPE process_start_time_seconds gauge\nprocess_start_time_seconds 1.73715607921e+09\n# HELP process_virtual_memory_bytes Virtual memory size in bytes.\n# TYPE process_virtual_memory_bytes gauge\nprocess_virtual_memory_bytes 1.264861184e+09\n# HELP process_virtual_memory_max_bytes Maximum amount of virtual memory available in bytes.\n# TYPE process_virtual_memory_max_bytes gauge\nprocess_virtual_memory_max_bytes 1.8446744073709552e+19\n# HELP promhttp_metric_handler_requests_in_flight Current number of scrapes being served.\n# TYPE promhttp_metric_handler_requests_in_flight gauge\npromhttp_metric_handler_requests_in_flight 1\n# HELP promhttp_metric_handler_requests_total Total number of scrapes by HTTP status code.\n# TYPE promhttp_metric_handler_requests_total counter\npromhttp_metric_handler_requests_total{code=\"200\"} 0\npromhttp_metric_handler_requests_total{code=\"500\"} 0\npromhttp_metric_handler_requests_total{code=\"503\"} 0\n"
+				}
+			]
+		},
+		{
+			"name": "AI Chat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Hello, how are you?\"\n  }],\n  \"provider\": \"openrouter\",\n  \"model\": \"anthropic/claude-3-sonnet\",\n  \"max_tokens\": 1000,\n  \"temperature\": 0.7\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/chat",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"chat"
+					]
+				},
+				"description": "Stream AI chat responses"
+			},
+			"response": [
+				{
+					"name": "AI Chat",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Hello, how are you?\"\n  }],\n  \"provider\": \"openrouter\",\n  \"model\": \"anthropic/claude-3-sonnet\",\n  \"max_tokens\": 1000,\n  \"temperature\": 0.7\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/chat",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "3600"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/event-stream"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Accel-Buffering",
+							"value": "no"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Jan 2025 23:23:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "281"
+						}
+					],
+					"cookie": [],
+					"body": "data: Hello\n\ndata: ! As\n\ndata:  an AI language\n\ndata:  model, I don\n\ndata: 't have feelings or emotions\n\ndata: , but I'm\n\ndata:  operating properly\n\ndata:  and ready to assist you with\n\ndata:  any questions or tasks\n\ndata:  you may have. How\n\ndata:  can I help\n\ndata:  you today?\n\n"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

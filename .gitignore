@@ -37,3 +37,4 @@ golang-ai-webservice
 
 # Docker related
 .docker/
+tmp
