@@ -1,4 +1,4 @@
-# Go HTTP Service Template
+# Go AI HTTP Service Template
 
 A production-ready HTTP service template with built-in observability, security, extensibility features, and AI integration capabilities.
 
